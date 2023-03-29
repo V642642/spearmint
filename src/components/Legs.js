@@ -14,7 +14,7 @@ export default function Legs({ data: payload }) {
 
   useEffect(() => {
     reset(payload);
-  }, [reset]);
+  }, [reset ,payload]);
 
   const onSubmit = (data) => {
     console.log(data);

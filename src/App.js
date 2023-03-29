@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     reset(payload);
-  }, [reset]);
+  }, [reset, payload]);
 
   const onSubmit = (data) => {
     dispatch(addLeg(data));
