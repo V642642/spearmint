@@ -147,8 +147,8 @@ function App() {
           </p>
           <p style={{ textAlign: "left" }}>
             trailSL : [ type : {data.trailSL.type} , value : [ instrumentMove :{" "}
-            {data.trailSL.value.instrumentMove} , stopLossMove :{" "}
-            {data.trailSL.value.stopLossMove}] ]
+            {data.trailSL.value?.instrumentMove} , stopLossMove :{" "}
+            {data.trailSL.value?.stopLossMove}] ]
           </p>
         </div>
       ))}</> : ""}
