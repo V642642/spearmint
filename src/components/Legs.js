@@ -17,16 +17,29 @@ export default function Legs({ data: payload }) {
     // eslint-disable-next-line
   }, [reset]);
 
+  const idcreater = new Date();
+  var components = [
+    idcreater.getYear(),
+    idcreater.getMonth(),
+    idcreater.getDate(),
+    idcreater.getHours(),
+    idcreater.getMinutes(),
+    idcreater.getSeconds(),
+    idcreater.getMilliseconds(),
+  ];
+
+
+
   const onSubmit = (data) => {
-    console.log(data);
-    dispatch(addLeg(data));
+    delete data.id;
+    let newObj = {...data , id : components.join("") }
+    dispatch(addLeg(newObj));
   };
 
   const onDelete = () => {
     dispatch(deleteLeg(payload.id));
   };
 
-  console.log(payload.simpleMomentum.type || payload.simpleMomentum.value);
   return (
     <div className="card relative">
       <form onSubmit={handleSubmit(onSubmit)} className="flex-column ">
