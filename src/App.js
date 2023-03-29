@@ -49,7 +49,8 @@ function App() {
 
   useEffect(() => {
     reset(payload);
-  }, [reset, payload]);
+    // eslint-disable-next-line
+  }, [reset]);
 
   const onSubmit = (data) => {
     dispatch(addLeg(data));

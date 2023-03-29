@@ -14,7 +14,8 @@ export default function Legs({ data: payload }) {
 
   useEffect(() => {
     reset(payload);
-  }, [reset ,payload]);
+    // eslint-disable-next-line
+  }, [reset]);
 
   const onSubmit = (data) => {
     console.log(data);
